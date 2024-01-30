@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Calificaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Registro de Calificaciones</h1>
+  <form>
+    <div class="container">
+      <div class="header-form row">
+        <label for="alumno">Alumno</label>
+        <input type="text" id="alumno">
+      </div>
+      <div class="row">
+        <h2>Materias</h2>
+        <h2>Calificación</h2>
+        <h2>Observación</h2>
+      </div>
+      <div class="row">
+        <label for="matematicas">Matemáticas</label>
+        <input type="number" name="matematicas" id="matematicas">
+        <span>---------------</span>
+      </div>
+      <div class="row">
+        <label for="geografia">Geografía</label>
+        <input type="number" name="geografia" id="geografia">
+        <span>---------------</span>
+      </div>
+      <div class="row">
+        <label for="espaniol">Español</label>
+        <input type="number" name="espaniol" id="espaniol">
+        <span>---------------</span>
+      </div>
+      <button type="submit">CALIFICAR</button>
+      <div class="result">
+      </div>
+    </div>
+  </form>
+  <script src="main.js"></script>
+</body>
+
+</html>

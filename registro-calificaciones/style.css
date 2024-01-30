@@ -1,0 +1,105 @@
+/* reset css */
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* starts here */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+h1 {
+  padding: 0 .3em;
+  text-transform: uppercase;
+  background-color: black;
+  color: aqua;
+}
+
+.header-form input {
+  color: saddlebrown;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.container * {
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row :first-child {
+  width: 6rem;
+}
+
+.row :nth-child(2) {
+  width: 6rem;
+}
+
+button {
+  padding: 0 2em;
+  background-color: rgb(0, 255, 0);
+  cursor: pointer;
+}
+
+/* loading animation */
+
+.result {
+  width: 100%;
+}
+
+.box {
+  border: 1px solid black;
+  height: 1rem;
+  width: 100%;
+}
+
+.loading {
+  background-color: rgb(0, 154, 0);
+  height: 100%;
+  animation: cargar linear 1s forwards;
+}
+
+@keyframes cargar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}

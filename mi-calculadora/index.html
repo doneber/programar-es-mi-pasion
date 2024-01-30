@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Calculadora</title>
+</head>
+
+<body>
+  <label>
+    Número 1
+    <input type="number" id="num1">
+  </label>
+  <label>
+    Número 2
+    <input type="number" id="num2">
+  </label>
+  <button onclick="sumar()">Sumar</button>
+  <br>
+  <label>
+    Resultado
+    <input type="number" id="res">
+  </label>
+  <script>
+    function sumar() {
+      const num1 = document.getElementById('num1').value
+      const num2 = document.getElementById('num2').value
+      const resultado = num1 + num2
+      document.getElementById('res').value = resultado
+    }
+  </script>
+</body>
+
+</html>
