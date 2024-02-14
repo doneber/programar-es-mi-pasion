@@ -1,0 +1,62 @@
+/* reset css */
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* styles */
+
+body {
+  padding: 0.5rem 1rem;
+  max-width: 650px;
+  margin: auto;
+}
+
+main {
+  & h1 {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
