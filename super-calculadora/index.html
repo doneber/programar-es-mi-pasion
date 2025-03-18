@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Calculadora</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        main {
+            height: 100%;
+            display: grid;
+            place-content: center;
+        }
+        .container {
+            width: fit-content;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        .display {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 2rem;
+            border: 1px solid black;
+            padding: 4px;
+            margin-bottom: 10px;
+        }
+        .buttons {
+            width: fit-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2px;
+        }
+        .btn {
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+        }
+        .btn.equals {
+            background-color: #f06c73;
+            border: 1px gray solid;
+            color: white;
+        }
+        .btn.equals:hover {
+            background-color: #e3666c;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="display"></div>
+            <div class="buttons">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">+</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">-</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">*</button>
+                <button class="btn">.</button>
+                <button class="btn">0</button>
+                <button class="btn equals">=</button>
+                <button class="btn">/</button>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        const $display = document.querySelector('.display');
+        const $buttons = document.querySelector('.buttons');
+        $buttons.addEventListener('click', (event)=> {
+            const $btn = event.target;
+            if ($btn.tagName !== 'BUTTON') return;
+            if ($btn.textContent === '=') {
+                $display.textContent = 'Hola mundo!'
+            } else {
+                $display.textContent += $btn.textContent;
+            }
+
+        })
+    </script>
+</body>
+</html>
