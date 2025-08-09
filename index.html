@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio oWeb</title>
+    <title>Mi Página web | Don Eber</title>
     <meta
       name="description"
-      content="Explora las innovadoras aplicaciones web creadas por @doneber, diseñadas para mejorar tu vida diaria y entretenerte."
+      content="Explora las innovadoras aplicaciones web creadas por Doneber: Lector de Mentes, Calculadora Mágica y Registro de Calificaciones. Diseñadas para mejorar tu vida diaria y entretenerte."
     >
+    <meta name="keywords" content="desarrollador web, aplicaciones web, calculadora, registro calificaciones, lector mentes, doneber">
+    <meta name="author" content="Doneber">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://doneber.dev/">
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Doneber - Desarrollador Web | Aplicaciones Innovadoras">
+    <meta property="og:description" content="Explora aplicaciones web innovadoras: Lector de Mentes, Calculadora Mágica y Registro de Calificaciones.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doneber.dev/">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Doneber - Desarrollador Web | Aplicaciones Innovadoras">
+    <meta name="twitter:description" content="Explora aplicaciones web innovadoras creadas por Doneber.">
+    
     <style>
       body {
         margin: 40px auto;
@@ -17,81 +34,112 @@
         color: #444;
         padding: 0 10px;
       }
-
       h1,
       h2,
       h3 {
         line-height: 1.2;
       }
+      p {
+        text-wrap: pretty;
+      }
+      
+      /* Mejora para enlaces con foco */
+      a:focus {
+        outline: 2px solid #0066cc;
+        outline-offset: 2px;
+      }
+
+      /* Salto de línea en dispositivos pequeños */
+      .break-mobile {
+        display: none;
+      }
+      
+      @media (max-width: 600px) {
+        .break-mobile {
+          display: block;
+        }
+      }
     </style>
   </head>
-
   <body>
-    <main>
-      <header>
-        <h1>Bienvenidos a mi Sitio Web</h1>
-        <p>He aquí las aplicaciones que un día cambiarán el mundo.</p>
-      </header>
-      <section>
-        <h2>Proyectos Destacados</h2>
+    <header>
+      <h1>Bienvenidos <br class="break-mobile"> a mi Sitio Web</h1>
+      <p>He aquí las aplicaciones que un día cambiarán el mundo. 🚀</p>
+    </header>
+    
+    <main id="main-content">
+      <section aria-labelledby="proyectos-heading">
+        <h2 id="proyectos-heading">Proyectos Destacados</h2>
         <ul>
           <li>
-            <a href="./registro-calificaciones/" target="_blank"
-              >Registro de Calificaciones</a
-            >
-            <p>
-              Una herramienta eficaz para profesores y estudiantes, diseñada
-              para calcular y monitorear promedios académicos fácilmente.
+            <p aria-level="3">
+              <a href="./lector de mentes/" target="_blank" aria-describedby="lector-desc">Lector de Mentes</a>
             </p>
-          </li>
-          <li>
-            <a href="./lector de mentes/" target="_blank">Lector de Mentes</a>
-
-            <p>
+            <p id="lector-desc">
               Una experiencia interactiva que te sorprenderá adivinando tus
               pensamientos mediante un algoritmo único.
             </p>
           </li>
           <li>
-            <a href="./mi-calculadora/" target="_blank">Calculadora Mágica</a>
-
-            <p>
+            <p aria-level="3">
+              <a href="./mi-calculadora/" target="_blank" aria-describedby="calc-desc">Calculadora Mágica</a>
+            </p>
+            <p id="calc-desc">
               Una calculadora minimalista que simplifica tus cálculos diarios
               con un diseño intuitivo y funcional.
             </p>
           </li>
+          <li>
+            <p aria-level="3">
+              <a href="./registro-calificaciones/" target="_blank" aria-describedby="registro-desc">Registro de Calificaciones</a>
+            </p>
+            <p id="registro-desc">
+              Una herramienta eficaz para profesores y estudiantes, diseñada
+              para calcular y monitorear promedios académicos fácilmente.
+            </p>
+          </li>
         </ul>
       </section>
-      <section>
-        <h1>Sobre mí</h1>
-        <p>Mi deporte favorito es el <i>debugging</i>.</p>
+      
+      <section aria-labelledby="about-heading">
+        <h2 id="about-heading">Sobre mí</h2>
+        <p>Nacido para <em>codear</em>, forzado a <em>debuggear</em></p>
+        <p>Prefiero mil veces el <em>Clean Code</em> que la <em>clean house</em></p>
         <p>
-          Encuentro más emocionante una <i>release</i> que cualquier otra cosa.
+          Encuentro más emocionante una <em>release</em> que cualquier otra cosa.
         </p>
-        <p>Prefiero mil veces el <i>Clean Code</i> que la <i>clean house</i></p>
+        <p>Mi deporte favorito es el <em>debugging</em>.</p>
       </section>
-      <section>
-        <h2>Contáctame</h2>
+      
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contáctame</h2>
         <p>
-          <a href="mailto:contact@doneber.dev">contact@doneber.dev</a>
+          <a href="mailto:contact@doneber.dev" aria-label="Enviar correo electrónico a contact@doneber.dev">contact@doneber.dev</a>
         </p>
       </section>
     </main>
+    
     <footer>
       <p
         style="
           display: flex;
           justify-content: end;
           color: green;
-          transform: rotate(-8deg);
+          transform: rotate(24deg);
           font-family: 'Comic Sans MS', 'Comic Sans', 'Papyrus', Courier, Arial;
+          position: absolute;
+          top: 40px;
+          right: 20px;
+          margin: 0;
         "
+        aria-label="Mi frase: Design is my passion"
       >
         Design is my passion.
       </p>
       <p>
-        &copy; 2024 | Todos los derechos reservados.
-        <a href="https://github.com/doneber/programar-es-mi-pasion">GitHub</a>
+        &copy; 2025 | Todos los derechos reservados. | 
+        <a href="https://github.com/doneber/programar-es-mi-pasion" 
+           aria-label="Ver código fuente en GitHub">GitHub</a>
       </p>
     </footer>
   </body>
